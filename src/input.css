@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+	@apply max-w-[80rem] mx-auto p-[1.5rem] sm:p-[1rem];
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block px-[1.5rem] py-[.8rem] rounded-[5px];
+    }
+    .violet{
+        @apply bg-primary text-light font-bold transition-[.5s] ease-in;
+    }
+    .violet:hover{
+        @apply scale-[1.04] transition-[.5s] ease-in;
+    }
+}
+
+@layer components{
+    .header{
+        @apply relative bg-light;
+    }
+
+    .header__wrapper{
+        @apply flex items-center justify-between;
+    }
+
+    .header__nav{
+        @apply absolute shadow-box bg-light overflow-hidden right-0 top-[4.2rem] h-[32rem] w-0 transition-[.5s] ease-in lg:hidden;
+    }
+
+    .header__nav.open{
+        @apply w-[50%] overflow-visible transition-[.5s] ease-in;
+    }
+
+    .header__nav ul li{
+        @apply pl-[1.5rem] pt-[1.2rem];
+    }
+
+    .header__nav ul li a{
+        @apply text-grey font-bold text-[1.3rem];
+    }
+
+    .header__nav ul li a:hover{
+        @apply text-primary
+    }
+
+    .header__nav__btn{
+        @apply flex justify-center mt-[7rem];
+    }
+
+    .header__nav2{
+        @apply hidden lg:flex lg:items-center lg:gap-[2rem] 
+    }
+
+    .header__nav2 ul{
+        @apply flex gap-[1.5rem];
+    }
+
+    .header__nav2 ul li{
+        @apply text-grey font-bold text-[1rem];
+    }
+
+    .header__nav2 ul li:hover{
+        @apply text-primary;
+    }
+
+    .toggle__menu{
+        @apply lg:hidden;
+    }
+
+    .toggle__menu span{
+        @apply rounded-full block w-[2rem] h-[.2rem] bg-purple-500;
+    }
+
+    .toggle__menu span:nth-child(2) {
+		@apply my-[.3rem];
+	}
+
+	.toggle__menu.open span:first-child {
+		@apply translate-x-0 translate-y-[8px] rotate-[40deg] transition-[.5s] ease-in;
+	}
+
+	.toggle__menu.open span:nth-child(2) {
+		@apply opacity-0 transition-[.5s] ease-in;
+	}
+	.toggle__menu.open span:last-child {
+		@apply translate-x-0 translate-y-[-8px] rotate-[-40deg] transition-[.5s] ease-in;
+	}
+
+
+    /* BANNER PAGE  */
+
+    .banner{
+        @apply py-[2rem] bg-light;
+    }
+
+    .banner-top{
+        @apply flex flex-col justify-center items-center gap-[2rem] lg:flex-row lg:gap-[2rem] lg:items-start;
+    }
+
+    /* .banner-left{
+        @apply lg:flex lg:flex-col lg:justify-start lg:items-start;
+    } */
+
+    .banner-content{
+        @apply bg-primary text-light rounded-[2rem] py-[.5rem] px-[.8rem] w-[17rem] mx-auto text-center leading-[1.2] lg:w-fit lg:mx-0;
+    }
+    .banner-content a{
+        @apply underline font-medium;
+    }
+    .banner-text h2{
+        @apply text-primary text-[2rem] font-medium w-[15rem] mx-auto text-center mt-[1.5rem] lg:text-left lg:mx-0 lg:text-[3rem] lg:w-[40rem];
+    }
+    .banner-text p{
+        @apply text-grey text-[1.1rem] font-medium w-[25rem] text-center mx-auto mt-[1.5rem] lg:text-left lg:mx-0 lg:w-[45rem];
+    }
+    .banner-email{
+        @apply flex flex-col gap-[.8rem] mt-[2rem] lg:flex-row;
+    }
+    .banner-email input{
+        @apply  bg-light rounded-[5px] p-[1rem] shadow-line outline-none border-solid border-[1px] border-transparent lg:py-[.5rem] lg:w-[20rem];
+    }
+    .banner-email input:focus{
+        @apply border-grey;
+    }
+    .banner-email a{
+        @apply text-center py-[1.1rem] lg:px-[1.5rem];
+    }
+    .banner-right{
+        @apply hidden lg:flex;
+    }
+    .banner-right img{
+        @apply w-[50rem] h-[32rem];
+    }
+    .banner-bot{
+        @apply mt-[2rem] px-[1.5rem];
+    }
+    .banner-bot p{
+        @apply text-grey font-medium;
+    }
+    .banner-bot ul{
+        @apply flex gap-[1rem] flex-wrap max-w-[20rem] mt-[1rem] lg:flex-nowrap lg:max-w-full;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
